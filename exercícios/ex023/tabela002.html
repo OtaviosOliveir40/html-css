@@ -18,19 +18,42 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+        
+        td.num {
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidade Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -144,8 +167,8 @@
             </tr>
         <tfoot>
             <tr>
-                <th>Quantidade</th>
-                <th class="num">200.000.000</th>
+                <th scope="row">Quantidade</th>
+                <td class="num">200.000.000</td>
             </tr>
         </tfoot>
 
