@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesclagem de Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        table {
+            border-collapse: collapse;
+            
+        }
+        caption{
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 2px;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 15px;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: lightgray;
+        }
+    
+    </style>
 </head>
 <body>
+    <h1>Mesclagem de tabelas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, et perferendis aut sunt inventore excepturi nulla! Aliquid, autem minima? Dicta fugiat voluptates, obcaecati autem at quo quasi aperiam consequatur voluptate?</p>
+
+    <table>
+        <caption>tabelas mescladas</caption>
+        <thead>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">A</td>
+                <td rowspan="2">B</td>
+                <td>C</td>
+                
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+        </tbody>
+    </table>
     
 </body>
 </html>
